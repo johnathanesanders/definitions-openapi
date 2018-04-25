@@ -1,0 +1,57 @@
+{
+  "description" : "A Time Zone",
+  "example" : {
+    "Abbreviation" : "EST",
+    "Common" : "Eastern",
+    "Identifier" : 51,
+    "MilitaryTimeZone" : "R",
+    "Name" : "America/New_York",
+    "ObservesDaylightSaving" : true,
+    "UtcOffset" : -5.0
+  },
+  "type" : "object",
+  "properties" : {
+    "Abbreviation" : {
+      "description" : "The common abbreviation for the time zone, if applicable.",
+      "nullable" : true,
+      "type" : "string"
+    },
+    "Common" : {
+      "description" : "The common name of the time zone.",
+      "nullable" : true,
+      "type" : "string"
+    },
+    "Identifier" : {
+      "description" : "The internal identifier of the time zone.",
+      "format" : "int64",
+      "nullable" : false,
+      "type" : "integer"
+    },
+    "MilitaryTimeZone" : {
+      "description" : "The US Military/Nautical time zone abbreviation.",
+      "enum" : [ "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" ],
+      "nullable" : true,
+      "type" : "string"
+    },
+    "Name" : {
+      "description" : "The canonical time zone name.",
+      "type" : "string"
+    },
+    "ObservesDaylightSaving" : {
+      "default" : false,
+      "description" : "Indicates if this time zone observes daylight saving time.",
+      "enum" : [ false, true ],
+      "nullable" : false,
+      "type" : "boolean"
+    },
+    "UtcOffset" : {
+      "description" : "The offset of this time zone from UTC without daylight saving applied.",
+      "format" : "float",
+      "nullable" : false,
+      "type" : "number"
+    }
+  },
+  "xml" : {
+    "name" : "TimeZone"
+  }
+}
