@@ -1,0 +1,90 @@
+{
+  "description" : "A geographic address",
+  "example" : {
+    "City" : "Raleigh",
+    "Country" : {
+      "CallingCode" : "+1",
+      "Identifier" : 840,
+      "IsoThreeCode" : "USA",
+      "IsoTwoCode" : "US",
+      "IsoNumeric" : 840,
+      "Name" : "United States of America"
+    },
+    "Identifier" : 1,
+    "Latitude" : 35.77518,
+    "Longitude" : -78.6373,
+    "PostalCode" : 27601,
+    "Subdivision" : {
+      "Abbreviation" : "NC",
+      "Category" : "state",
+      "Identifier" : 18,
+      "IsoCode" : "US-NC",
+      "IsoTwoCode" : "US",
+      "Name" : "North Carolina"
+    },
+    "StreetAddress" : "100 East Davie Street",
+    "StreetAddressAdditional" : null,
+    "TimeZone" : {
+      "Abbreviation" : "EST",
+      "Common" : "Eastern",
+      "Identifier" : 51,
+      "MilitaryTimeZone" : "R",
+      "Name" : "America/New_York",
+      "ObservesDaylightSaving" : true,
+      "UtcOffset" : -5.0
+    }
+  },
+  "type" : "object",
+  "properties" : {
+    "City" : {
+      "description" : "The city name.",
+      "nullable" : true,
+      "type" : "string"
+    },
+    "Country" : {
+      "$ref" : "./Country.json"
+    },
+    "Identifier" : {
+      "description" : "The internal identifier of the address.",
+      "format" : "int64",
+      "nullable" : false,
+      "type" : "integer"
+    },
+    "Latitude" : {
+      "description" : "The geographic coordinate that specifies the north–south position of the address. If City, Country, PostalCode, Subdivision, and StreetAddress are not provided, then Latitude and Longitude are required.",
+      "format" : "double",
+      "nullable" : true,
+      "type" : "number"
+    },
+    "Longitude" : {
+      "description" : "The geographic coordinate that specifies the east-west position of the address. If City, Country, PostalCode, Subdivision, and StreetAddress are not provided, then Latitude and Longitude are required.",
+      "format" : "double",
+      "nullable" : true,
+      "type" : "number"
+    },
+    "PostalCode" : {
+      "description" : "The postal code of the address.",
+      "nullable" : true,
+      "type" : "string"
+    },
+    "Subdivision" : {
+      "$ref" : "./Subdivision.json"
+    },
+    "StreetAddress" : {
+      "description" : "The number and street name of the address.",
+      "nullable" : true,
+      "type" : "string"
+    },
+    "StreetAddressAdditional" : {
+      "description" : "Street location information in addition to StreetAddress.",
+      "nullable" : true,
+      "type" : "string"
+    },
+    "TimeZone" : {
+      "$ref" : "./TimeZone.json"
+    }
+  },
+  "xml" : {
+    "name" : "Address"
+  }
+}
