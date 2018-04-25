@@ -1,0 +1,49 @@
+{
+  "description" : "A Country",
+  "example" : {
+    "CallingCode" : "+1",
+    "Identifier" : 840,
+    "IsoThreeCode" : "USA",
+    "IsoTwoCode" : "US",
+    "IsoNumeric" : 840,
+    "Name" : "United States of America"
+  },
+  "type" : "object",
+  "properties" : {
+    "CallingCode" : {
+      "description" : "The ITU-T E.123/E.164 international prefix code for the country",
+      "nullable" : true,
+      "type" : "string"
+    },
+    "Identifier" : {
+      "description" : "The internal identifier of the country. **Please Note:** *While attempts are made to ensure consistency, this identifier is not necessarily the same as the IsoNumeric code*",
+      "format" : "int64",
+      "nullable" : false,
+      "type" : "integer"
+    },
+    "IsoThreeCode" : {
+      "description" : "The ISO 3166-1 three character code of the country",
+      "nullable" : false,
+      "type" : "string"
+    },
+    "IsoTwoCode" : {
+      "description" : "The ISO 3166-1 two character code of the country",
+      "nullable" : false,
+      "type" : "string"
+    },
+    "IsoNumeric" : {
+      "description" : "The ISO 3166-1 numeric code of the country",
+      "format" : "int64",
+      "nullable" : false,
+      "type" : "integer"
+    },
+    "Name" : {
+      "description" : "The ISO 3166-1 English short name for the country",
+      "nullable" : false,
+      "type" : "string"
+    }
+  },
+  "xml" : {
+    "name" : "Country"
+  }
+}
