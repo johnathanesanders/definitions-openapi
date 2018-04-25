@@ -1,0 +1,32 @@
+{
+  "top": {
+    "name": "$top",
+    "type": "integer",
+    "in": "query",
+    "description": "Show only the first n items, see [OData Paging – Top](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html#_Toc445374630))"
+  },
+  "skip": {
+    "name": "$skip",
+    "type": "integer",
+    "in": "query",
+    "description": "Skip the first n items, see [OData Paging - Skip]( http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html#_Toc445374631)"
+  },
+  "count": {
+    "name": "$count",
+    "type": "boolean",
+    "in": "query",
+    "description": "Include count of items, see [OData Count]( http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html#_Toc445374632)"
+  },
+  "filter": {
+    "name": "$filter",
+    "type": "string",
+    "in": "query",
+    "description": "Filter items by property values, see [OData Filtering]( http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html#_Toc445374625)"
+  },
+  "search": {
+    "name": "$search",
+    "type": "string",
+    "in": "query",
+    "description": "Search items by search phrases, see [OData Searching]( http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html#_Toc445374633)"
+  }
+}
