@@ -1,0 +1,49 @@
+{
+  "description" : "An ISO 3166-2 subdivision, commonly referred to as a \"State\", \"Province\", or \"Parish\"",
+  "example" : {
+    "Abbreviation" : "NC",
+    "Category" : "state",
+    "Identifier" : 18,
+    "IsoCode" : "US-NC",
+    "IsoTwoCode" : "US",
+    "Name" : "North Carolina"
+  },
+  "type" : "object",
+  "properties" : {
+    "Abbreviation" : {
+      "description" : "The common abbreviation for the subdivision, if applicable.",
+      "nullable" : true,
+      "type" : "string"
+    },
+    "Category" : {
+      "default" : "state",
+      "description" : "The subdivision category such as \"state\" or \"territory\"",
+      "nullable" : false,
+      "type" : "string"
+    },
+    "Identifier" : {
+      "description" : "The internal identififer of the subdivision.",
+      "format" : "int64",
+      "nullable" : false,
+      "type" : "integer"
+    },
+    "IsoCode" : {
+      "description" : "The ISO 3166-2 code of the subdivision",
+      "nullable" : false,
+      "type" : "string"
+    },
+    "IsoTwoCode" : {
+      "description" : "The ISO 3166-1 two character code of the country to which this subdivision belongs.",
+      "nullable" : false,
+      "type" : "string"
+    },
+    "Name" : {
+      "description" : "The common name of the subdivision.",
+      "nullable" : false,
+      "type" : "string"
+    }
+  },
+  "xml" : {
+    "name" : "Subdivision"
+  }
+}
