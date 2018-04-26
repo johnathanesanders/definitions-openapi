@@ -1,0 +1,41 @@
+{
+  "description": "A person",
+  "example": {
+    "FirstName": "Johnathan",
+    "Identifier": 1,
+    "LastName": "Sanders",
+    "PrimaryLanguage": {
+      "Identifier": 41,
+      "IsoSixThirtyNineDashOne": "en",
+      "IsoSixThirtyNineDashTwo": "eng",
+      "Name": "English"
+    }
+  },
+  "type": "object",
+  "properties": {
+    "FirstName": {
+      "description": "The person's first name",
+      "nullable": false,
+      "pattern": "/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u",
+      "type": "string"
+    },
+    "Identifier": {
+      "description": "The internal identifier of the person",
+      "format": "int64",
+      "nullable": false,
+      "type": "integer"
+    },
+    "LastName": {
+      "description": "The person's last name",
+      "nullable": true,
+      "pattern": "/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u",
+      "type": "string"
+    },
+    "PrimaryLanguage": {
+      "$ref": "./Language.json"
+    }
+  },
+  "xml": {
+    "name":  "Person"
+  }
+}
