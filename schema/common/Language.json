@@ -1,0 +1,38 @@
+{
+  "description": "Language",
+  "example": {
+    "Identifier": 1,
+    "IsoSixThirtyNineDashOne": "en",
+    "IsoSixThirtyNineDashTwo": "eng",
+    "Name": "English"
+  },
+  "type": "object",
+  "properties": {
+    "Identifier": {
+      "description": "The internal identifier of the language.",
+      "format": "int64",
+      "nullable": false,
+      "type": "integer"
+    },
+    "IsoSixThirtyNineDashOne": {
+      "description": "The ISO 639-1 code of the language.",
+      "nullable": false,
+      "pattern": "[a-z]{2}",
+      "type": "string"
+    },
+    "IsoSixThirtyNineDashTwo": {
+      "description": "The ISO 639-2 code of the language.",
+      "nullable": false,
+      "pattern": "[A-Z]{3}",
+      "type": "string"
+    },
+    "Name": {
+      "description": "The ISO language name.",
+      "nullable": false,
+      "type": "string"
+    }
+  },
+  "xml": {
+    "name": "Language"
+  }
+}
