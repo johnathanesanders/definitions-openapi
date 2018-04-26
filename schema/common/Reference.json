@@ -1,0 +1,37 @@
+{
+  "description": "A named key/value pair, also known as a 'reference'. The key is typically a listed Reference Identification Qualifier as found in section 128 of the X12 5010 specifications",
+  "example": {
+    "Identifier": 1,
+    "Qualifier": "ACB",
+    "QualifierDefinition": "Region",
+    "Value": "Southwest"
+  },
+  "type": "object",
+  "properties": {
+    "Identifier": {
+      "description": "The internal identifier of the reference",
+      "format": "int64",
+      "nullable": false,
+      "type": "integer"
+    },
+    "Qualifier": {
+      "description": "The named key in the key/value pair",
+      "nullable": false,
+      "pattern": "[a-zA-Z0-9]{255}",
+      "type": "string"
+    },
+    "QualifierDefinition": {
+      "description": "The definition of the Qualifier.",
+      "nullable": true,
+      "type":  "string"
+    },
+    "Value": {
+      "description": "The value in the key/value pair",
+      "nullable": true,
+      "type":  "string"
+    }
+  },
+  "xml": {
+    "name":  "Reference"
+  }
+}
