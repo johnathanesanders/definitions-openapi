@@ -1,0 +1,71 @@
+{
+  "description": "Currency",
+  "example": {
+    "CountriesInUse": [
+      {
+        "CallingCode": "+1",
+        "Identifier": 124,
+        "IsoThreeCode": "CAN",
+        "IsoTwoCode": "CA",
+        "IsoNumeric": 124,
+        "Name": "Canada"
+      }
+    ],
+    "DigitsAfterDecimal": 2,
+    "Identifier": 1,
+    "IsoNumeric": 124,
+    "IsoThreeCode": "CAD",
+    "Name": "Canadian Dollar",
+    "RegexFormat": "^(?!\\(.*[^)]$|[^(].*\\)$)\\(?\\$?(0|[1-9]\\d{0,2}(,?\\d{3})?)(\\.\\d\\d?)?\\)?$"
+  },
+  "type": "object",
+  "properties": {
+    "CountriesInUse": {
+      "description": "A list of countries for which this currency is in use.",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/johnathanesanders/definitions-openapi/master/schema/common/Country.json"
+      },
+      "nullable": true,
+      "type": "array"
+    },
+    "DigitsAfterDecimal": {
+      "default": 2,
+      "description": "The number of digits after the decimal. Default is TWO",
+      "format": "int32",
+      "nullable": false,
+      "type": "integer"
+    },
+    "Identifier": {
+      "description": "The internal identifier of the currency.",
+      "format": "int64",
+      "nullable": false,
+      "type": "integer"
+    },
+    "IsoNumeric": {
+      "description": "The ISO 4217 numeric code of the currency.",
+      "format": "int64",
+      "nullable": false,
+      "type": "integer"
+    },
+    "IsoThreeCode": {
+      "description": "The ISO 4217 three character code of the currency - including cryptocurrencies.",
+      "nullable": true,
+      "pattern": "[A-Z]{3}",
+      "type": "string"
+    },
+    "Name": {
+      "description": "The common name of the currency.",
+      "nullable": false,
+      "type": "string"
+    },
+    "RegexFormat": {
+      "default": "^(?!\\(.*[^)]$|[^(].*\\)$)\\(?\\$?(0|[1-9]\\d{0,2}(,?\\d{3})?)(\\.\\d\\d?)?\\)?$",
+      "description": "The regular expression to be applied for proper formatting.",
+      "nullable": true,
+      "type": "string"
+    }
+  },
+  "xml": {
+    "name": "Currency"
+  }
+}
