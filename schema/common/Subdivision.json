@@ -1,5 +1,5 @@
 {
-  "description" : "An ISO 3166-2 subdivision, commonly referred to as a \"State\", \"Province\", or \"Parish\"",
+  "description" : "An ISO 3166-2 subdivision, commonly referred to as a 'State', 'Province', or 'Parish'",
   "example" : {
     "Abbreviation" : "NC",
     "Category" : "state",
@@ -17,7 +17,7 @@
     },
     "Category" : {
       "default" : "state",
-      "description" : "The subdivision category such as \"state\" or \"territory\"",
+      "description" : "The subdivision category such as 'state' or 'territory'",
       "nullable" : false,
       "type" : "string"
     },
