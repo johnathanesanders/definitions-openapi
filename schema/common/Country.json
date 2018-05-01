@@ -13,6 +13,7 @@
     "CallingCode" : {
       "description" : "The ITU-T E.123/E.164 international prefix code for the country",
       "nullable" : true,
+      "pattern": "^([+]){1}([0-9 ]){1,}$",
       "type" : "string"
     },
     "Identifier" : {
@@ -24,17 +25,20 @@
     "IsoThreeCode" : {
       "description" : "The ISO 3166-1 three character code of the country",
       "nullable" : false,
+      "pattern": "^[a-zA-Z]{3}$",
       "type" : "string"
     },
     "IsoTwoCode" : {
       "description" : "The ISO 3166-1 two character code of the country",
       "nullable" : false,
+      "pattern": "^[a-zA-Z]{2}$",
       "type" : "string"
     },
     "IsoNumeric" : {
       "description" : "The ISO 3166-1 numeric code of the country",
       "format" : "int64",
       "nullable" : false,
+      "pattern": "^[0-9]{3}$",
       "type" : "integer"
     },
     "Name" : {
