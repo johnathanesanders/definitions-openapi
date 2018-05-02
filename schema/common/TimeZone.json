@@ -2,10 +2,10 @@
   "description" : "A Time Zone",
   "example" : {
     "Abbreviation" : "EST",
-    "Common" : "Eastern",
+    "Canonical" : "America/New_York",
     "Identifier" : 51,
     "MilitaryTimeZone" : "R",
-    "Name" : "America/New_York",
+    "Name" : "Eastern",
     "ObservesDaylightSaving" : true,
     "UtcOffset" : -5.0
   },
@@ -16,9 +16,8 @@
       "nullable" : true,
       "type" : "string"
     },
-    "Common" : {
-      "description" : "The common name of the time zone.",
-      "nullable" : true,
+    "Canonical" : {
+      "description" : "The canonical time zone name.",
       "type" : "string"
     },
     "Identifier" : {
@@ -34,7 +33,8 @@
       "type" : "string"
     },
     "Name" : {
-      "description" : "The canonical time zone name.",
+      "description" : "The common name of the time zone.",
+      "nullable" : true,
       "type" : "string"
     },
     "ObservesDaylightSaving" : {
