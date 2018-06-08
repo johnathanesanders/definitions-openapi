@@ -342,13 +342,13 @@
         "YTD",
         "YTM"
       ],
-      "description": "The ISO unit code for the measurement."
+      "description": "The ISO unit code for the measurement.",
       "nullable": false,
       "type": "string"
     },
     "Unit": {
       "description": "The common name of the measurement.",
-      "nullable":  false
+      "nullable":  false,
       "type": "string"
     },
     "UnitCode": {
